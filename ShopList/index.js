@@ -78,8 +78,7 @@ export const ShopList = (props) => {
 
   element.querySelector('.shoplist__new').addEventListener('submit', handleSubmit);
 
-  const handleReset = (event) => {
-    event.preventDefault();
+  const handleReset = () => {
 
     fetch(`https://nakupy.kodim.app/api/me/week/${day}/actions`, {
       method: 'POST',
@@ -99,8 +98,7 @@ export const ShopList = (props) => {
 
   element.querySelector('.reset-btn').addEventListener('click', handleReset);
 
-  const handleClear = (event) => {
-    event.preventDefault();
+  const handleClear = () => {
 
     fetch(`https://nakupy.kodim.app/api/me/week/${day}/actions`, {
       method: 'POST',
